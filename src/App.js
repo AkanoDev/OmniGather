@@ -252,11 +252,11 @@ function Menu({
 function Intro() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-intro items-center gap-0 lg:gap-96 px-8 lg:px-40 bg-dark">
-      <em className="py-20 lg:w-700 text-center lg:text-start">
-        <h1 className="text text-5xl lg:text-7xl mb-8 text-light">
+      <em className="py-20 lg:w-700">
+        <h1 className="text text-5xl lg:text-7xl mb-8  text-center lg:text-start text-light">
           Welcome to my Free Learning Hub!
         </h1>
-        <p className="text text-4xl text-light ">
+        <p className="text text-4xl text-light ml-9 lg:ml-0">
           Unleash a world of knowledge with curated resources. Whether you're a
           student or lifelong learner, explore insightful articles and more.
           Navigate the user-friendly interface to access valuable materials and
@@ -275,8 +275,8 @@ function Intro() {
 
 function NavigationBar() {
   return (
-    <nav className="flex items-center justify-center lg:justify-start bg-light h-32">
-      <h1 className="text-4xl ml-0 lg:ml-40 text-dark font-semibold ">
+    <nav className="flex items-center justify-start bg-light h-32">
+      <h1 className="text-4xl ml-14 lg:ml-40 text-dark font-semibold ">
         OmniGather
       </h1>
     </nav>
