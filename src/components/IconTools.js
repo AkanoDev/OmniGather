@@ -2,9 +2,9 @@ import { icon } from "../objects/icons";
 
 export function IconTools() {
   return (
-    <ul className="css-tools">
+    <ul className="flex flex-wrap gap-12">
       {icon.map((tool) => (
-        <Icon tools={tool} />
+        <Icon tools={tool} key={tool.title} />
       ))}
     </ul>
   );

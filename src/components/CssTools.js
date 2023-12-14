@@ -1,9 +1,9 @@
 import { csstool } from "../objects/csstool";
 export function CssTools() {
   return (
-    <ul className="css-tools">
+    <ul className="flex flex-wrap gap-12">
       {csstool.map((tool) => (
-        <Css tools={tool} />
+        <Css tools={tool} key={tool.title} />
       ))}
     </ul>
   );

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-lightest: #ffffff;
   --color-light: #f5f5f5;
@@ -18,31 +22,29 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body {
+/* body {
   background-color: var(--color-medium);
-}
+} */
 
-.app {
-}
-
-nav {
+/* nav {
   height: 90px;
   display: flex;
   align-items: center;
   background-color: var(--color-lightest);
-}
+} */
 
-nav h1 {
+/* nav h1 {
   font-size: 2.5rem;
   margin-left: 10rem;
   color: var(--color-dark);
-}
+} */
 
-.content {
-  display: block;
-}
+/* .content {
+  background-color: red;
+  height: 100%;
+} */
 
-.intro {
+/* .intro {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -50,21 +52,21 @@ nav h1 {
 
   padding: 0 10rem;
   background-color: var(--color-dark);
-}
+} */
 
-.intro h1 {
+/* .intro h1 {
   font-size: 4rem;
   margin-bottom: 2rem;
   color: var(--color-lightest);
-}
-
+} */
+/* 
 .intro p {
   font-size: 2.2rem;
   color: var(--color-lightest);
   width: 70rem;
-}
+} */
 
-.menus {
+/* .menus {
   display: flex;
   margin-bottom: 10rem;
   margin-top: 20rem;
@@ -77,18 +79,18 @@ nav h1 {
   width: 350px;
   height: 150vh;
   margin: 0 15rem 0 0;
-}
+} */
 
-.resources {
+/* .resources {
   position: relative;
 
   display: flex;
   flex-wrap: wrap;
 
   width: 100%;
-}
+} */
 
-.front-end-tools,
+/* .front-end-tools,
 .web-design-tools,
 .documentation-tools,
 .css-tools {
@@ -98,13 +100,9 @@ nav h1 {
 
   position: absolute;
   width: 100%;
-}
+} */
 
-.front-end {
-  list-style: none;
-}
-
-.front-end .card {
+.card {
   width: 200px;
   height: 200px;
   border-radius: 8px;

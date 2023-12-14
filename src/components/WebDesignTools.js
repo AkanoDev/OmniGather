@@ -2,9 +2,9 @@ import { webtool } from "../objects/webdesign";
 
 export function WebDesignTools() {
   return (
-    <ul className="web-design-tools">
+    <ul className="flex flex-wrap gap-12">
       {webtool.map((tool) => (
-        <WebDesign tools={tool} />
+        <WebDesign tools={tool} key={tool.title} />
       ))}
     </ul>
   );

@@ -2,9 +2,9 @@ import { photo } from "../objects/photo";
 
 export function PhotoTools() {
   return (
-    <ul className="css-tools">
+    <ul className="flex flex-wrap gap-12">
       {photo.map((tool) => (
-        <Photo tools={tool} />
+        <Photo tools={tool} key={tool.title} />
       ))}
     </ul>
   );

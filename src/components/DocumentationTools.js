@@ -2,9 +2,9 @@ import { documentation } from "../objects/documentation";
 
 export function DocumentationTools() {
   return (
-    <ul className="documentation-tools">
+    <ul className="flex flex-wrap gap-12">
       {documentation.map((tool) => (
-        <Documentation tools={tool} />
+        <Documentation tools={tool} key={tool.title} />
       ))}
     </ul>
   );

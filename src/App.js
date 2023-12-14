@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./index.css";
-import "./responsive.css";
 import { FrontEndTools } from "./components/FrontEndTools";
 import { WebDesignTools } from "./components/WebDesignTools";
 import { DocumentationTools } from "./components/DocumentationTools";
@@ -118,46 +117,43 @@ export default function App() {
   }
 
   return (
-    <div className="app">
+    <div className="flex flex-col max-w-max h-auto bg-medium">
       <NavigationBar />
-      <div className="content">
-        <Intro />
+      <Intro />
+      <div className="flex mb-40 mt-80 px-40 pb-20 h-auto">
+        <div>
+          <Menu
+            onHandleWeb={handleWeb}
+            onHandleDoc={handleDocumention}
+            onHandleCss={handleCss}
+            onHandleColor={handleColor}
+            onHandleIcon={handleIcon}
+            onHandlePhoto={handlePhoto}
+            onHandleFront={handleFront}
+            onHandleRoad={handleRoadmap}
+            ///
+            openFront={openFront}
+            openWeb={openWeb}
+            openDocumentation={openDocumentation}
+            openCss={openCss}
+            openColor={openColor}
+            openIcon={openIcon}
+            openPhoto={openPhoto}
+            openRoadmap={openRoadmap}
+          />
+        </div>
 
-        <div className="menus">
-          <div className="side-bar">
-            <Menu
-              onHandleWeb={handleWeb}
-              onHandleDoc={handleDocumention}
-              onHandleCss={handleCss}
-              onHandleColor={handleColor}
-              onHandleIcon={handleIcon}
-              onHandlePhoto={handlePhoto}
-              onHandleFront={handleFront}
-              onHandleRoad={handleRoadmap}
-              ///
-              openFront={openFront}
-              openWeb={openWeb}
-              openDocumentation={openDocumentation}
-              openCss={openCss}
-              openColor={openColor}
-              openIcon={openIcon}
-              openPhoto={openPhoto}
-              openRoadmap={openRoadmap}
-            />
-          </div>
-
-          <div className="resources">
-            <Resources
-              openWeb={openWeb}
-              openFront={openFront}
-              openDocumentation={openDocumentation}
-              openCss={openCss}
-              openColor={openColor}
-              openIcon={openIcon}
-              openPhoto={openPhoto}
-              openRoadmap={openRoadmap}
-            />
-          </div>
+        <div>
+          <Resources
+            openWeb={openWeb}
+            openFront={openFront}
+            openDocumentation={openDocumentation}
+            openCss={openCss}
+            openColor={openColor}
+            openIcon={openIcon}
+            openPhoto={openPhoto}
+            openRoadmap={openRoadmap}
+          />
         </div>
       </div>
     </div>
@@ -224,7 +220,7 @@ function Menu({
   onHandleRoad,
 }) {
   return (
-    <ul className="menu">
+    <ul className=" menu mr-60 w-96 hidden lg:block">
       <li onClick={onHandleFront} className={!openFront ? "active" : ""}>
         All Tools
       </li>
@@ -255,10 +251,12 @@ function Menu({
 
 function Intro() {
   return (
-    <div className="intro">
-      <em>
-        <h1>Welcome to my Free Learning Hub!</h1>
-        <p>
+    <div className="grid grid-cols-1 lg:grid-cols-intro items-center gap-0 lg:gap-96 px-8 lg:px-40 bg-dark">
+      <em className="py-20 lg:w-700 text-center lg:text-start">
+        <h1 className="text text-5xl lg:text-7xl mb-8 text-light">
+          Welcome to my Free Learning Hub!
+        </h1>
+        <p className="text text-4xl text-light ">
           Unleash a world of knowledge with curated resources. Whether you're a
           student or lifelong learner, explore insightful articles and more.
           Navigate the user-friendly interface to access valuable materials and
@@ -266,15 +264,21 @@ function Intro() {
           start exploring!
         </p>
       </em>
-      <img src="./logos/maleonpc.png" alt="male on pc" />
+      <img
+        src="./logos/maleonpc.png"
+        alt="male on pc"
+        className="hidden lg:block"
+      />
     </div>
   );
 }
 
 function NavigationBar() {
   return (
-    <nav>
-      <h1> ResourceHub</h1>
+    <nav className="flex items-center justify-center lg:justify-start bg-light h-32">
+      <h1 className="text-4xl ml-0 lg:ml-40 text-dark font-semibold ">
+        OmniGather
+      </h1>
     </nav>
   );
 }

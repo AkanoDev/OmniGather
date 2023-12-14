@@ -2,9 +2,9 @@ import { frontend } from "../objects/frontend";
 
 export function FrontEndTools() {
   return (
-    <ul className="front-end-tools">
+    <ul className="flex flex-wrap gap-12 justify-center lg:justify-start">
       {frontend.map((tool) => (
-        <FrontEnd tools={tool} />
+        <FrontEnd tools={tool} key={tool.title} />
       ))}
     </ul>
   );

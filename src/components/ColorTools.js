@@ -2,9 +2,9 @@ import { color } from "../objects/color";
 
 export function ColorTools() {
   return (
-    <ul className="css-tools">
+    <ul className="flex flex-wrap gap-12">
       {color.map((tool) => (
-        <Color tools={tool} />
+        <Color tools={tool} key={tool.title} />
       ))}
     </ul>
   );

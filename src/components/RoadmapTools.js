@@ -2,9 +2,9 @@ import { roadmap } from "../objects/roadmap";
 
 export function RoadmapTools() {
   return (
-    <ul className="css-tools">
+    <ul className="flex flex-wrap gap-12">
       {roadmap.map((tool) => (
-        <Roadmap tools={tool} />
+        <Roadmap tools={tool} key={tool.title} />
       ))}
     </ul>
   );
